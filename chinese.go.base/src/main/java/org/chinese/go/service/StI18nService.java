@@ -202,7 +202,7 @@ public class StI18nService {
 		if ("all".equalsIgnoreCase(msgType)) {
 			i18nList = i18nRepository.findByMsgLanguage(language);
 		} else {
-			i18nList = i18nRepository.findByMsgTypeAndMsgLanguage(language, msgType);
+			i18nList = i18nRepository.findByMsgTypeAndMsgLanguage(msgType,language);
 		}
 
 		if (i18nList == null) {

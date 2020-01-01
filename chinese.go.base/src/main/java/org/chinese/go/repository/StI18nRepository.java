@@ -42,10 +42,10 @@ public interface StI18nRepository extends JpaRepository <StI18n, String>{
 	/**
 	 *	根据国际化类型和语言查询国际化信息
 	 *
-	 *	@param language
 	 *	@param msgType
+	 *	@param msgLanguage
 	 *	@return
 	 */
-	List<StI18n> findByMsgTypeAndMsgLanguage(String language,String msgType);
+	List<StI18n> findByMsgTypeAndMsgLanguage(String msgType,String msgLanguage);
 
 }
