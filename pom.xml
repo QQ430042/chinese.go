@@ -56,5 +56,6 @@
 		<module>chinese.go.core</module>
 		<module>chinese.go.web</module>
     	<module>chinese.go.log</module>
-  </modules>
+    	<module>chinese.go.i18n</module>
+	</modules>
 </project>

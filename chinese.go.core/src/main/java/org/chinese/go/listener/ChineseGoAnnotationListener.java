@@ -15,17 +15,15 @@ import org.chinese.go.util.AnnotationUtil;
 
 /**
  * 
- * 	注解监听器
- * 
+ *	注解监听器
  *
  * @author 2430042@qq.com
- * @createDate 2018年9月6日
- * @version 1.0.0
- * @Project chinaese.go.core
+ * @createDate 2020年1月1日
+ * @version 2.x.x.RELEASE
+ * @Project chinese.go.core
  *
- * @copyright www.chinaesego.org
+ * @copyright www.chinesego.org
  */
-
 @WebListener
 public class ChineseGoAnnotationListener implements ServletContextListener {
 
@@ -39,11 +37,11 @@ public class ChineseGoAnnotationListener implements ServletContextListener {
 	 */
 	@Override
 	public void contextInitialized(ServletContextEvent sce) {
-		List<String> permissionCodeList = AnnotationUtil.getAllPermissionCodes("org.chinaese.go");
+		List<String> permissionCodeList = AnnotationUtil.getAllPermissionCodes("org.chinese.go");
 		logger.info("Authority code size 【" + permissionCodeList.size() + "】\n");
-		List<String> restUrlList = AnnotationUtil.getAllRestUrl("org.chinaese.go");
+		List<String> restUrlList = AnnotationUtil.getAllRestUrl("org.chinese.go");
 		logger.info("Rest url size 【" + restUrlList.size() + "】\n");
-		List<String> entityList = AnnotationUtil.getAllDocument("org.chinaese.go");
+		List<String> entityList = AnnotationUtil.getAllDocument("org.chinese.go");
 		logger.info("Entity size 【" + entityList.size() + "】\n");
 	}
 

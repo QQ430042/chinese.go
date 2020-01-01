@@ -1,4 +1,4 @@
-package org.chinese.go.entity;
+package org.chineseX.go.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -7,18 +7,18 @@ import java.util.List;
 
 
 /**
- * The persistent class for the bt_team database table.
+ * The persistent class for the bt_project database table.
  * 
  */
 @Entity
-@Table(name="bt_team")
-@NamedQuery(name="BtTeam.findAll", query="SELECT b FROM BtTeam b")
-public class BtTeam implements Serializable {
+@Table(name="bt_project")
+@NamedQuery(name="BtProject.findAll", query="SELECT b FROM BtProject b")
+public class BtProject implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="TEAM_ID")
-	private String teamId;
+	@Column(name="PROJECT_ID")
+	private String projectId;
 
 	@Column(name="CREATE_BY")
 	private String createBy;
@@ -29,14 +29,17 @@ public class BtTeam implements Serializable {
 	@Column(name="DELETE_FLAG")
 	private String deleteFlag;
 
+	@Column(name="person_liable_id")
+	private String personLiableId;
+
+	@Column(name="PROJECT_NAME")
+	private String projectName;
+
+	@Column(name="PROJECT_TYPE")
+	private String projectType;
+
 	@Column(name="SHOW_ORDER")
 	private int showOrder;
-
-	@Column(name="TEAM_DESC")
-	private String teamDesc;
-
-	@Column(name="TEAM_NAME")
-	private String teamName;
 
 	@Column(name="UP_DATA_BY")
 	private String upDataBy;
@@ -45,22 +48,18 @@ public class BtTeam implements Serializable {
 	private Timestamp upDataTime;
 
 	//bi-directional many-to-one association to BtSprint
-	@OneToMany(mappedBy="btTeam")
+	@OneToMany(mappedBy="btProject")
 	private List<BtSprint> btSprints;
 
-	//bi-directional many-to-one association to BtTeamUser
-	@OneToMany(mappedBy="btTeam")
-	private List<BtTeamUser> btTeamUsers;
-
-	public BtTeam() {
+	public BtProject() {
 	}
 
-	public String getTeamId() {
-		return this.teamId;
+	public String getProjectId() {
+		return this.projectId;
 	}
 
-	public void setTeamId(String teamId) {
-		this.teamId = teamId;
+	public void setProjectId(String projectId) {
+		this.projectId = projectId;
 	}
 
 	public String getCreateBy() {
@@ -87,28 +86,36 @@ public class BtTeam implements Serializable {
 		this.deleteFlag = deleteFlag;
 	}
 
+	public String getPersonLiableId() {
+		return this.personLiableId;
+	}
+
+	public void setPersonLiableId(String personLiableId) {
+		this.personLiableId = personLiableId;
+	}
+
+	public String getProjectName() {
+		return this.projectName;
+	}
+
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
+
+	public String getProjectType() {
+		return this.projectType;
+	}
+
+	public void setProjectType(String projectType) {
+		this.projectType = projectType;
+	}
+
 	public int getShowOrder() {
 		return this.showOrder;
 	}
 
 	public void setShowOrder(int showOrder) {
 		this.showOrder = showOrder;
-	}
-
-	public String getTeamDesc() {
-		return this.teamDesc;
-	}
-
-	public void setTeamDesc(String teamDesc) {
-		this.teamDesc = teamDesc;
-	}
-
-	public String getTeamName() {
-		return this.teamName;
-	}
-
-	public void setTeamName(String teamName) {
-		this.teamName = teamName;
 	}
 
 	public String getUpDataBy() {
@@ -137,38 +144,16 @@ public class BtTeam implements Serializable {
 
 	public BtSprint addBtSprint(BtSprint btSprint) {
 		getBtSprints().add(btSprint);
-		btSprint.setBtTeam(this);
+		btSprint.setBtProject(this);
 
 		return btSprint;
 	}
 
 	public BtSprint removeBtSprint(BtSprint btSprint) {
 		getBtSprints().remove(btSprint);
-		btSprint.setBtTeam(null);
+		btSprint.setBtProject(null);
 
 		return btSprint;
-	}
-
-	public List<BtTeamUser> getBtTeamUsers() {
-		return this.btTeamUsers;
-	}
-
-	public void setBtTeamUsers(List<BtTeamUser> btTeamUsers) {
-		this.btTeamUsers = btTeamUsers;
-	}
-
-	public BtTeamUser addBtTeamUser(BtTeamUser btTeamUser) {
-		getBtTeamUsers().add(btTeamUser);
-		btTeamUser.setBtTeam(this);
-
-		return btTeamUser;
-	}
-
-	public BtTeamUser removeBtTeamUser(BtTeamUser btTeamUser) {
-		getBtTeamUsers().remove(btTeamUser);
-		btTeamUser.setBtTeam(null);
-
-		return btTeamUser;
 	}
 
 }

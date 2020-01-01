@@ -30,6 +30,11 @@
 			<artifactId>chinese.go.log</artifactId>
 			<version>${chinese.go.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>chinese.go</groupId>
+			<artifactId>chinese.go.i18n</artifactId>
+			<version>${chinese.go.version}</version>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -1,4 +1,4 @@
-package org.chinese.go.entity;
+package org.chineseX.go.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -6,18 +6,18 @@ import java.sql.Timestamp;
 
 
 /**
- * The persistent class for the st_role_fun database table.
+ * The persistent class for the bt_bug database table.
  * 
  */
 @Entity
-@Table(name="st_role_fun")
-@NamedQuery(name="StRoleFun.findAll", query="SELECT s FROM StRoleFun s")
-public class StRoleFun implements Serializable {
+@Table(name="bt_bug")
+@NamedQuery(name="BtBug.findAll", query="SELECT b FROM BtBug b")
+public class BtBug implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="ROLE_FUN_ID")
-	private String roleFunId;
+	@Column(name="BUG_ID")
+	private String bugId;
 
 	@Column(name="CREATE_BY")
 	private String createBy;
@@ -28,12 +28,6 @@ public class StRoleFun implements Serializable {
 	@Column(name="DELETE_FLAG")
 	private String deleteFlag;
 
-	@Column(name="FUNCTION_ID")
-	private String functionId;
-
-	@Column(name="ROLE_ID")
-	private String roleId;
-
 	@Column(name="SHOW_ORDER")
 	private int showOrder;
 
@@ -43,15 +37,20 @@ public class StRoleFun implements Serializable {
 	@Column(name="UP_DATA_TIME")
 	private Timestamp upDataTime;
 
-	public StRoleFun() {
+	//bi-directional many-to-one association to BtStory
+	@ManyToOne
+	@JoinColumn(name="STORY_ID")
+	private BtStory btStory;
+
+	public BtBug() {
 	}
 
-	public String getRoleFunId() {
-		return this.roleFunId;
+	public String getBugId() {
+		return this.bugId;
 	}
 
-	public void setRoleFunId(String roleFunId) {
-		this.roleFunId = roleFunId;
+	public void setBugId(String bugId) {
+		this.bugId = bugId;
 	}
 
 	public String getCreateBy() {
@@ -78,22 +77,6 @@ public class StRoleFun implements Serializable {
 		this.deleteFlag = deleteFlag;
 	}
 
-	public String getFunctionId() {
-		return this.functionId;
-	}
-
-	public void setFunctionId(String functionId) {
-		this.functionId = functionId;
-	}
-
-	public String getRoleId() {
-		return this.roleId;
-	}
-
-	public void setRoleId(String roleId) {
-		this.roleId = roleId;
-	}
-
 	public int getShowOrder() {
 		return this.showOrder;
 	}
@@ -116,6 +99,14 @@ public class StRoleFun implements Serializable {
 
 	public void setUpDataTime(Timestamp upDataTime) {
 		this.upDataTime = upDataTime;
+	}
+
+	public BtStory getBtStory() {
+		return this.btStory;
+	}
+
+	public void setBtStory(BtStory btStory) {
+		this.btStory = btStory;
 	}
 
 }

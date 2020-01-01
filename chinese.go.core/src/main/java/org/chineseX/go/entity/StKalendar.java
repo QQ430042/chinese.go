@@ -1,26 +1,26 @@
-package org.chinese.go.entity;
+package org.chineseX.go.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+import java.util.Date;
 import java.sql.Timestamp;
 
 
 /**
- * The persistent class for the st_user_role database table.
+ * The persistent class for the st_kalendar database table.
  * 
  */
 @Entity
-@Table(name="st_user_role")
-@NamedQuery(name="StUserRole.findAll", query="SELECT s FROM StUserRole s")
-public class StUserRole implements Serializable {
+@Table(name="st_kalendar")
+@NamedQuery(name="StKalendar.findAll", query="SELECT s FROM StKalendar s")
+public class StKalendar implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="USER_ROLE_ID")
-	private String userRoleId;
+	@Column(name="DAY_ID")
+	private String dayId;
 
-	@Column(name="AVAILABILITY_DATE")
-	private Timestamp availabilityDate;
+	private String country;
 
 	@Column(name="CREATE_BY")
 	private String createBy;
@@ -31,11 +31,18 @@ public class StUserRole implements Serializable {
 	@Column(name="DELETE_FLAG")
 	private String deleteFlag;
 
-	@Column(name="EXPIRY_DATE")
-	private Timestamp expiryDate;
+	@Column(name="HOLIDAY_DESC")
+	private String holidayDesc;
 
-	@Column(name="ROLE_ID")
-	private String roleId;
+	@Column(name="HOLIDAY_FLAG")
+	private String holidayFlag;
+
+	@Column(name="HOLIDAY_TYPE")
+	private String holidayType;
+
+	@Temporal(TemporalType.DATE)
+	@Column(name="NATURAL_DAY")
+	private Date naturalDay;
 
 	@Column(name="SHOW_ORDER")
 	private int showOrder;
@@ -46,26 +53,23 @@ public class StUserRole implements Serializable {
 	@Column(name="UP_DATA_TIME")
 	private Timestamp upDataTime;
 
-	@Column(name="USER_ID")
-	private String userId;
-
-	public StUserRole() {
+	public StKalendar() {
 	}
 
-	public String getUserRoleId() {
-		return this.userRoleId;
+	public String getDayId() {
+		return this.dayId;
 	}
 
-	public void setUserRoleId(String userRoleId) {
-		this.userRoleId = userRoleId;
+	public void setDayId(String dayId) {
+		this.dayId = dayId;
 	}
 
-	public Timestamp getAvailabilityDate() {
-		return this.availabilityDate;
+	public String getCountry() {
+		return this.country;
 	}
 
-	public void setAvailabilityDate(Timestamp availabilityDate) {
-		this.availabilityDate = availabilityDate;
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 	public String getCreateBy() {
@@ -92,20 +96,36 @@ public class StUserRole implements Serializable {
 		this.deleteFlag = deleteFlag;
 	}
 
-	public Timestamp getExpiryDate() {
-		return this.expiryDate;
+	public String getHolidayDesc() {
+		return this.holidayDesc;
 	}
 
-	public void setExpiryDate(Timestamp expiryDate) {
-		this.expiryDate = expiryDate;
+	public void setHolidayDesc(String holidayDesc) {
+		this.holidayDesc = holidayDesc;
 	}
 
-	public String getRoleId() {
-		return this.roleId;
+	public String getHolidayFlag() {
+		return this.holidayFlag;
 	}
 
-	public void setRoleId(String roleId) {
-		this.roleId = roleId;
+	public void setHolidayFlag(String holidayFlag) {
+		this.holidayFlag = holidayFlag;
+	}
+
+	public String getHolidayType() {
+		return this.holidayType;
+	}
+
+	public void setHolidayType(String holidayType) {
+		this.holidayType = holidayType;
+	}
+
+	public Date getNaturalDay() {
+		return this.naturalDay;
+	}
+
+	public void setNaturalDay(Date naturalDay) {
+		this.naturalDay = naturalDay;
 	}
 
 	public int getShowOrder() {
@@ -130,14 +150,6 @@ public class StUserRole implements Serializable {
 
 	public void setUpDataTime(Timestamp upDataTime) {
 		this.upDataTime = upDataTime;
-	}
-
-	public String getUserId() {
-		return this.userId;
-	}
-
-	public void setUserId(String userId) {
-		this.userId = userId;
 	}
 
 }

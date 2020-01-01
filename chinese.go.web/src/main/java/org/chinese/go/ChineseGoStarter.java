@@ -5,11 +5,16 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 //import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.context.annotation.Configuration;
 //import org.springframework.boot.autoconfigure.domain.EntityScan;
 //import org.springframework.boot.web.servlet.ServletComponentScan;
 //import org.springframework.cache.annotation.EnableCaching;
 //import org.springframework.context.annotation.Configuration;
 //import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 /**
  * 
@@ -23,12 +28,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  *
  * @copyright www.chinesego.org
  */
-//@EnableCaching
-//@Configuration
+@EnableCaching
+@Configuration
 //@EnableAutoConfiguration(exclude = { org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class })
-//@EnableJpaRepositories(basePackages = "org.chinese.go")
-//@EntityScan(basePackages = "org.chinese.go")
-//@ServletComponentScan(basePackages = "org.chinese.go")
+@EnableJpaRepositories(basePackages = "org.chinese.go")
+@EntityScan(basePackages = "org.chinese.go")
+@ServletComponentScan(basePackages = "org.chinese.go")
 @SpringBootApplication(scanBasePackages = { "org.chinese.go" })
 public class ChineseGoStarter {
 

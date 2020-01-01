@@ -1,4 +1,4 @@
-package org.chinese.go.entity;
+package org.chineseX.go.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
@@ -6,21 +6,27 @@ import java.sql.Timestamp;
 
 
 /**
- * The persistent class for the st_sequence database table.
+ * The persistent class for the st_classify database table.
  * 
  */
 @Entity
-@Table(name="st_sequence")
-@NamedQuery(name="StSequence.findAll", query="SELECT s FROM StSequence s")
-public class StSequence implements Serializable {
+@Table(name="st_classify")
+@NamedQuery(name="StClassify.findAll", query="SELECT s FROM StClassify s")
+public class StClassify implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="SEQ_CODE")
-	private String seqCode;
+	@Column(name="CLASSIFY_ID")
+	private String classifyId;
 
-	@Column(name="BUFFER_SIZE")
-	private int bufferSize;
+	@Column(name="CLASSIFY_DESC")
+	private String classifyDesc;
+
+	@Column(name="CLASSIFY_NAME")
+	private String classifyName;
+
+	@Column(name="CLASSIFY_TYPE")
+	private String classifyType;
 
 	@Column(name="CREATE_BY")
 	private String createBy;
@@ -28,17 +34,8 @@ public class StSequence implements Serializable {
 	@Column(name="CREATE_TIME")
 	private Timestamp createTime;
 
-	@Column(name="CURRENT_VALUE")
-	private int currentValue;
-
 	@Column(name="DELETE_FLAG")
 	private String deleteFlag;
-
-	@Column(name="SEQ_NAME")
-	private String seqName;
-
-	@Column(name="SEQ_PREFIX")
-	private String seqPrefix;
 
 	@Column(name="SHOW_ORDER")
 	private int showOrder;
@@ -49,23 +46,39 @@ public class StSequence implements Serializable {
 	@Column(name="UP_DATA_TIME")
 	private Timestamp upDataTime;
 
-	public StSequence() {
+	public StClassify() {
 	}
 
-	public String getSeqCode() {
-		return this.seqCode;
+	public String getClassifyId() {
+		return this.classifyId;
 	}
 
-	public void setSeqCode(String seqCode) {
-		this.seqCode = seqCode;
+	public void setClassifyId(String classifyId) {
+		this.classifyId = classifyId;
 	}
 
-	public int getBufferSize() {
-		return this.bufferSize;
+	public String getClassifyDesc() {
+		return this.classifyDesc;
 	}
 
-	public void setBufferSize(int bufferSize) {
-		this.bufferSize = bufferSize;
+	public void setClassifyDesc(String classifyDesc) {
+		this.classifyDesc = classifyDesc;
+	}
+
+	public String getClassifyName() {
+		return this.classifyName;
+	}
+
+	public void setClassifyName(String classifyName) {
+		this.classifyName = classifyName;
+	}
+
+	public String getClassifyType() {
+		return this.classifyType;
+	}
+
+	public void setClassifyType(String classifyType) {
+		this.classifyType = classifyType;
 	}
 
 	public String getCreateBy() {
@@ -84,36 +97,12 @@ public class StSequence implements Serializable {
 		this.createTime = createTime;
 	}
 
-	public int getCurrentValue() {
-		return this.currentValue;
-	}
-
-	public void setCurrentValue(int currentValue) {
-		this.currentValue = currentValue;
-	}
-
 	public String getDeleteFlag() {
 		return this.deleteFlag;
 	}
 
 	public void setDeleteFlag(String deleteFlag) {
 		this.deleteFlag = deleteFlag;
-	}
-
-	public String getSeqName() {
-		return this.seqName;
-	}
-
-	public void setSeqName(String seqName) {
-		this.seqName = seqName;
-	}
-
-	public String getSeqPrefix() {
-		return this.seqPrefix;
-	}
-
-	public void setSeqPrefix(String seqPrefix) {
-		this.seqPrefix = seqPrefix;
 	}
 
 	public int getShowOrder() {

@@ -1,23 +1,24 @@
-package org.chinese.go.entity;
+package org.chineseX.go.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.List;
 
 
 /**
- * The persistent class for the bt_meeting_user database table.
+ * The persistent class for the bt_meeting database table.
  * 
  */
 @Entity
-@Table(name="bt_meeting_user")
-@NamedQuery(name="BtMeetingUser.findAll", query="SELECT b FROM BtMeetingUser b")
-public class BtMeetingUser implements Serializable {
+@Table(name="bt_meeting")
+@NamedQuery(name="BtMeeting.findAll", query="SELECT b FROM BtMeeting b")
+public class BtMeeting implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="MEETING_USER_ID")
-	private String meetingUserId;
+	@Column(name="MEETING_ID")
+	private String meetingId;
 
 	@Column(name="CREATE_BY")
 	private String createBy;
@@ -37,20 +38,24 @@ public class BtMeetingUser implements Serializable {
 	@Column(name="UP_DATA_TIME")
 	private Timestamp upDataTime;
 
-	//bi-directional many-to-one association to BtMeeting
+	//bi-directional many-to-one association to BtStory
 	@ManyToOne
-	@JoinColumn(name="MEETING_ID")
-	private BtMeeting btMeeting;
+	@JoinColumn(name="STORY_ID")
+	private BtStory btStory;
 
-	public BtMeetingUser() {
+	//bi-directional many-to-one association to BtMeetingUser
+	@OneToMany(mappedBy="btMeeting")
+	private List<BtMeetingUser> btMeetingUsers;
+
+	public BtMeeting() {
 	}
 
-	public String getMeetingUserId() {
-		return this.meetingUserId;
+	public String getMeetingId() {
+		return this.meetingId;
 	}
 
-	public void setMeetingUserId(String meetingUserId) {
-		this.meetingUserId = meetingUserId;
+	public void setMeetingId(String meetingId) {
+		this.meetingId = meetingId;
 	}
 
 	public String getCreateBy() {
@@ -101,12 +106,34 @@ public class BtMeetingUser implements Serializable {
 		this.upDataTime = upDataTime;
 	}
 
-	public BtMeeting getBtMeeting() {
-		return this.btMeeting;
+	public BtStory getBtStory() {
+		return this.btStory;
 	}
 
-	public void setBtMeeting(BtMeeting btMeeting) {
-		this.btMeeting = btMeeting;
+	public void setBtStory(BtStory btStory) {
+		this.btStory = btStory;
+	}
+
+	public List<BtMeetingUser> getBtMeetingUsers() {
+		return this.btMeetingUsers;
+	}
+
+	public void setBtMeetingUsers(List<BtMeetingUser> btMeetingUsers) {
+		this.btMeetingUsers = btMeetingUsers;
+	}
+
+	public BtMeetingUser addBtMeetingUser(BtMeetingUser btMeetingUser) {
+		getBtMeetingUsers().add(btMeetingUser);
+		btMeetingUser.setBtMeeting(this);
+
+		return btMeetingUser;
+	}
+
+	public BtMeetingUser removeBtMeetingUser(BtMeetingUser btMeetingUser) {
+		getBtMeetingUsers().remove(btMeetingUser);
+		btMeetingUser.setBtMeeting(null);
+
+		return btMeetingUser;
 	}
 
 }
