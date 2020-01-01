@@ -1,4 +1,4 @@
-package org.chinese.go.i18n.entity;
+package org.chinese.go.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;

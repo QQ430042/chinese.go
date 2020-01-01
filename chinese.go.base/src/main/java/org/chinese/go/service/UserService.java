@@ -1,4 +1,4 @@
-package org.chinese.go.i18n.service;
+package org.chinese.go.service;
 //package org.chinaese.go.i18n.service;
 //
 ////import java.util.List;

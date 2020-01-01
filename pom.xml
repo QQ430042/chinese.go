@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
 		<mysql.version>5.1.34</mysql.version>
-		<chinese.go.version>1.0.0-SNAPSHOT</chinese.go.version>
+		<chinese.go.version>1.0.1-SNAPSHOT</chinese.go.version>
 		<java.version>1.8</java.version>
 	</properties>
 	<parent>
@@ -41,11 +43,11 @@
 		</dependency>
 		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-security</artifactId> 
 			</dependency> -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 		<!-- 数据库版本一致 -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -55,7 +57,7 @@
 	<modules>
 		<module>chinese.go.core</module>
 		<module>chinese.go.web</module>
-    	<module>chinese.go.log</module>
-    	<module>chinese.go.i18n</module>
+		<module>chinese.go.log</module>
+		<module>chinese.go.base</module>
 	</modules>
 </project>

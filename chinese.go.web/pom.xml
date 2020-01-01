@@ -32,7 +32,7 @@
 		</dependency>
 		<dependency>
 			<groupId>chinese.go</groupId>
-			<artifactId>chinese.go.i18n</artifactId>
+			<artifactId>chinese.go.base</artifactId>
 			<version>${chinese.go.version}</version>
 		</dependency>
 	</dependencies>

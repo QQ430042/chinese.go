@@ -1,7 +1,7 @@
-package org.chinese.go.i18n;
+package org.chinese.go;
 
 
-import org.chinese.go.i18n.entity.StI18n;
+import org.chinese.go.entity.StI18n;
 
 /**
  * 

@@ -1,25 +1,24 @@
 /**
  * 
  */
-package org.chinese.go.i18n.repository;
+package org.chinese.go.repository;
 
 
 import java.util.List;
 
-import org.chinese.go.i18n.entity.StI18n;
+import org.chinese.go.entity.StI18n;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * 
- * 
- *  [国际化信息]
+ *	国际化信息
  *
  * @author 2430042@qq.com
- * @createDate 2019年11月10日
- * @version 2.1.5.RELEASE
- * @Project chinaese.go.core
+ * @createDate 2020年1月1日
+ * @version 2.x.x.RELEASE
+ * @Project chinese.go.base
  *
- * @copyright www.chinaesego.org
+ * @copyright www.chinesego.org
  */
 public interface StI18nRepository extends JpaRepository <StI18n, String>{
 	

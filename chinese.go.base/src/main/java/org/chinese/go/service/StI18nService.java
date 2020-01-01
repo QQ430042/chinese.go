@@ -1,4 +1,4 @@
-package org.chinese.go.i18n.service;
+package org.chinese.go.service;
 
 import java.util.HashMap;
 import java.util.List;
@@ -10,13 +10,13 @@ import org.apache.commons.logging.LogFactory;
 import org.chinese.go.AppException;
 import org.chinese.go.annotation.Location;
 import org.chinese.go.annotation.Operation;
+import org.chinese.go.I18nBean;
+import org.chinese.go.entity.StI18n;
 import org.chinese.go.AppConstant;
 import org.chinese.go.OperationType;
 import org.chinese.go.exception.InvalidDataException;
 import org.chinese.go.exception.NoDataFoundException;
-import org.chinese.go.i18n.I18nBean;
-import org.chinese.go.i18n.entity.StI18n;
-import org.chinese.go.i18n.repository.StI18nRepository;
+import org.chinese.go.repository.StI18nRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
