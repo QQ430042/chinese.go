@@ -8,7 +8,6 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
 		<mysql.version>5.1.34</mysql.version>
-		<chinese.go.version>1.0.1-SNAPSHOT</chinese.go.version>
 		<java.version>1.8</java.version>
 	</properties>
 	<parent>
@@ -19,7 +18,7 @@
 	</parent>
 	<groupId>chinese.go</groupId>
 	<artifactId>chinese.go.parent</artifactId>
-	<version>${chinese.go.version}</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>chinese.go</name>
 	<description>chinese.go</description>

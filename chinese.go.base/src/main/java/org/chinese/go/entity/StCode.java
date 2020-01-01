@@ -2,6 +2,9 @@ package org.chinese.go.entity;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import org.hibernate.annotations.GenericGenerator;
+
 import java.sql.Timestamp;
 
 
@@ -16,6 +19,8 @@ public class StCode implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
+	@GenericGenerator(name="idGenerator", strategy="uuid2")
+    @GeneratedValue(generator="idGenerator")
 	@Column(name="CODE_ID")
 	private String codeId;
 

@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>chinese.go</groupId>
 		<artifactId>chinese.go.parent</artifactId>
-		<version>${chinese.go.version}</version>
+		<version>1.0.1-SNAPSHOT</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
 

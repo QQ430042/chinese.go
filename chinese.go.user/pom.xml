@@ -7,11 +7,11 @@
 	<parent>
 		<groupId>chinese.go</groupId>
 		<artifactId>chinese.go.parent</artifactId>
-		<version>${chinese.go.version}</version>
+		<version>1.0.1-SNAPSHOT</version>
 	</parent>
 	<groupId>chinese.go.user</groupId>
 	<artifactId>chinese.go.user</artifactId>
-	<version>${chinese.go.version}</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<name>chinese.go.user</name>
 	<url>http://maven.apache.org</url>
 	<properties>
