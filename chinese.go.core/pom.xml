@@ -6,11 +6,11 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>chinese.go</groupId>
-		<artifactId>chinese.go</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
+		<artifactId>chinese.go.parent</artifactId>
+		<version>${chinese.go.version}</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	<groupId>chinese.go.core</groupId>
+	
 	<artifactId>chinese.go.core</artifactId>
 	<name>chinese.go.core</name>
 	<url>http://maven.apache.org</url>

@@ -3,6 +3,14 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
+		<mysql.version>5.1.34</mysql.version>
+		<chinese.go.version>1.0.0-SNAPSHOT</chinese.go.version>
+		<java.version>1.8</java.version>
+	</properties>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -10,19 +18,12 @@
 		<relativePath>./pom.xml</relativePath>
 	</parent>
 	<groupId>chinese.go</groupId>
-	<artifactId>chinese.go</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<artifactId>chinese.go.parent</artifactId>
+	<version>${chinese.go.version}</version>
 	<packaging>pom</packaging>
 	<name>chinese.go</name>
 	<description>chinese.go</description>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<maven-jar-plugin.version>3.0.0</maven-jar-plugin.version>
-		<mysql.version>5.1.34</mysql.version>
-		<chinaese.go.version>2.2.2.RELEASE</chinaese.go.version>
-		<java.version>1.8</java.version>
-	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -40,10 +41,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-cache</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
