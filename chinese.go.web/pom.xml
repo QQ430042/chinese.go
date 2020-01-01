@@ -10,7 +10,7 @@
 		<version>${chinese.go.version}</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<artifactId>chinese.go.web</artifactId>
 	<name>chinese.go.web</name>
 	<url>http://maven.apache.org</url>
@@ -26,9 +26,9 @@
 			<version>${chinese.go.version}</version>
 		</dependency>
 	</dependencies>
-	
+
 	<build>
-		<plugins>		
+		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -36,7 +36,7 @@
 					<mainClass>org.chinese.go.ChineseGoStarter</mainClass>
 				</configuration>
 			</plugin>
-			
+
 			<!-- 生成sources源码包的插件 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

@@ -1,4 +1,4 @@
-package org.chinese.go.core;
+package org.chinese.go.cm;
 
 /**
  * Hello world!

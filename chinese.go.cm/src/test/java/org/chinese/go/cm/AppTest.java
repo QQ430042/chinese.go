@@ -1,4 +1,4 @@
-package org.chinese.go.core;
+package org.chinese.go.cm;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

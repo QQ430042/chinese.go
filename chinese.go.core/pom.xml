@@ -10,7 +10,7 @@
 		<version>${chinese.go.version}</version>
 		<relativePath>../pom.xml</relativePath>
 	</parent>
-	
+
 	<artifactId>chinese.go.core</artifactId>
 	<name>chinese.go.core</name>
 	<url>http://maven.apache.org</url>
