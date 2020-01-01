@@ -1,7 +1,7 @@
 /**
  * 
  */
-package org.chinese.go.interceptor;
+package org.chinese.go.log.interceptor;
 
 import java.lang.reflect.Method;
 import java.sql.Timestamp;
@@ -16,18 +16,18 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.chinese.go.AppConstant;
-import org.chinese.go.annotation.Location;
-import org.chinese.go.annotation.Operation;
-import org.chinese.go.entity.StAppLog;
-import org.chinese.go.exception.NoAuthorityException;
-import org.chinese.go.repository.StAppLogRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.chinese.go.AppConstant;
+import org.chinese.go.exception.NoAuthorityException;
+import org.chinese.go.log.entity.StAppLog;
+import org.chinese.go.log.repository.StAppLogRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import org.chinese.go.annotation.Location;
+import org.chinese.go.annotation.Operation;
 
 /**
  * 

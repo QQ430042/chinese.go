@@ -1,11 +1,11 @@
 /**
  * 
  */
-package org.chinese.go.repository;
+package org.chinese.go.log.repository;
 
 
 
-import org.chinese.go.entity.StAppLog;
+import org.chinese.go.log.entity.StAppLog;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
