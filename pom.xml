@@ -55,9 +55,6 @@
 	<modules>
 		<module>chinese.go.core</module>
 		<module>chinese.go.web</module>
-		<module>chinese.go.user</module>
-		<module>chinese.go.cm</module>
-		<module>chinese.go.entity</module>
-    <module>chinese.go.log</module>
+    	<module>chinese.go.log</module>
   </modules>
 </project>
