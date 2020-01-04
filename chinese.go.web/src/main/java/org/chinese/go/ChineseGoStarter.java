@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Configuration;
 //import org.springframework.context.annotation.Configuration;
 //import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 
 /**
  * 
@@ -34,6 +35,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages = "org.chinese.go")
 @EntityScan(basePackages = "org.chinese.go")
 @ServletComponentScan(basePackages = "org.chinese.go")
+//@EnableGlobalMethodSecurity(securedEnabled = true, jsr250Enabled = true, prePostEnabled = true)
 @SpringBootApplication(scanBasePackages = { "org.chinese.go" })
 public class ChineseGoStarter {
 
