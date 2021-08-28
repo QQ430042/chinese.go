@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tab?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.chinese.go.notebook.controller.NotebookController"
+            AnchorPane.rightAnchor="0.0"
+            AnchorPane.leftAnchor="0.0"
+            AnchorPane.topAnchor="0.0"
+            AnchorPane.bottomAnchor="0.0"
+            prefHeight="650.0" prefWidth="1024.0">
+    <fx:include source="top.fxml"/>
+    <SplitPane dividerPositions="0.8,0.2" orientation="VERTICAL" AnchorPane.rightAnchor="0.0"
+               AnchorPane.leftAnchor="0.0"
+               AnchorPane.topAnchor="29.0"
+               AnchorPane.bottomAnchor="0.0">
+        <SplitPane dividerPositions="0.2,0.8,0.2" orientation="HORIZONTAL">
+            <Pane>
+                <TabPane tabClosingPolicy="UNAVAILABLE" side="LEFT">
+                    <Tab text="日记">
+                        <Text text="xxxx"></Text>
+                    </Tab>
+                    <Tab text="文档">
+                        <Text text="YYY"></Text>
+                    </Tab>
+                </TabPane>
+
+            </Pane>
+            <Pane>
+                <Text text="xxxx"></Text>
+            </Pane>
+            <Pane>
+                <Text text="xxxx"></Text>
+            </Pane>
+        </SplitPane>
+        <Pane>
+            <Text text="xxxx"></Text>
+        </Pane>
+    </SplitPane>
+</AnchorPane>

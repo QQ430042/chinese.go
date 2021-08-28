@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ToolBar xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.chinese.go.notebook.controller.SearchController"
+         AnchorPane.rightAnchor="15.0">
+    <CheckBox text="日记"/>
+    <CheckBox text="文档"/>
+    <CheckBox text="任务"/>
+    <TextField text="搜索框"/>
+    <Button text="搜索"/>
+</ToolBar>

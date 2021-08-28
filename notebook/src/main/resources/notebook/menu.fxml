@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<ToolBar xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         fx:controller="org.chinese.go.notebook.controller.MenuController"
+         AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+    <MenuBar>
+        <Menu text="文件">
+            <MenuItem text="打开"/>
+            <MenuItem text="保存"/>
+            <MenuItem text="关闭"/>
+        </Menu>
+        <Menu text="编辑">
+            <MenuItem text="打开"/>
+            <MenuItem text="保存"/>
+            <MenuItem text="关闭"/>
+        </Menu>
+        <Menu text="工具">
+            <MenuItem text="打开"/>
+            <MenuItem text="保存"/>
+            <MenuItem text="关闭"/>
+        </Menu>
+        <Menu text="帮助">
+            <MenuItem text="打开"/>
+            <MenuItem text="保存"/>
+            <MenuItem text="关闭"/>
+        </Menu>
+    </MenuBar>
+</ToolBar>
